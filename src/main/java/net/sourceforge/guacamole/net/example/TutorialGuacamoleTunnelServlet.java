@@ -22,9 +22,9 @@ public class TutorialGuacamoleTunnelServlet
         // Create our configuration
         GuacamoleConfiguration config = new GuacamoleConfiguration();
         config.setProtocol("vnc");
-        config.setParameter("hostname", "localhost");
-        config.setParameter("port", "5901");
-        config.setParameter("password", "potato");
+        config.setParameter("hostname", "192.168.1.111");
+        config.setParameter("port", "5911");
+        config.setParameter("password", "acoman");
 
         // Connect to guacd - everything is hard-coded here.
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
