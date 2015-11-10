@@ -37,7 +37,7 @@ public class TutorialGuacamoleTunnelServlet
 			username = matcher.group(4);
 			password = matcher.group(5);
 		}
-        System.out.println(port);
+		
         // Create our configuration
         GuacamoleConfiguration config = new GuacamoleConfiguration();
         config.setProtocol("vnc");
