@@ -21,6 +21,6 @@
 
     <servlet-mapping>
         <servlet-name>Tunnel</servlet-name>
-        <url-pattern>/tunnel</url-pattern>
+        <url-pattern>/tunnel/*</url-pattern>
     </servlet-mapping>
 </web-app>
