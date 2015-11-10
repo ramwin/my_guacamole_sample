@@ -1,5 +1,7 @@
 package org.glyptodon.guacamole.net.example;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.glyptodon.guacamole.GuacamoleException;
@@ -19,6 +21,23 @@ public class TutorialGuacamoleTunnelServlet
     protected GuacamoleTunnel doConnect(HttpServletRequest request)
         throws GuacamoleException {
 
+        StringBuffer url = request.getRequestURL();
+        Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9.]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
+        Matcher matcher = pattern.matcher(url);
+        
+        String type = "";
+		String host = "";
+		String port = "";
+		String username = "";
+		String password = "";
+		if (matcher.find()) {
+			type = matcher.group(1);
+			host = matcher.group(2);
+			port = matcher.group(3);
+			username = matcher.group(4);
+			password = matcher.group(5);
+		}
+		
         // Create our configuration
         GuacamoleConfiguration config = new GuacamoleConfiguration();
         config.setProtocol("vnc");
