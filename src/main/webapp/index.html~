@@ -24,7 +24,6 @@
             <input type="button" value="result" onclick="test()"/>
         </form>
         
-        <button onclick="test()">click me</button>
 
         <!-- Init -->
         <script type="text/javascript">
