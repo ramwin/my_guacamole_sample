@@ -44,7 +44,11 @@ public class TutorialGuacamoleTunnelServlet
         config.setParameter("hostname", host);
         config.setParameter("port", port);
         config.setParameter("password", password);
-
+        if ( type != "vnc")
+            config.setParameter("username",username);
+        else 
+            {
+            }
         // Connect to guacd - everything is hard-coded here.
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
                 new InetGuacamoleSocket("localhost", 4822),
