@@ -33,7 +33,7 @@
                 var port =document.getElementById("port").value;
                 var username =document.getElementById("username").value;
                 var password =document.getElementById("password").value;
-                 result = "tunnel"+"/"+"type"+type+"/"+"host"+host+"/"+"port"+port+"/"+"username"+username+"/"+"password"+password+"/"+"tunnel";
+                 result = "http://192.168.1.161:8080/wangx29/tunnel"+"/"+"type"+type+"/"+"host"+host+"/"+"port"+port+"/"+"username"+username+"/"+"password"+password+"/"+"tunnel";
                  
 
                 // Get display div from document
@@ -41,7 +41,7 @@
 
                 // Instantiate client, using an HTTP tunnel for communications.
                 var guac = new Guacamole.Client(
-                    new Guacamole.HTTPTunnel(result,True)
+                    new Guacamole.HTTPTunnel(tunnelURL = result,crossDomain = true)
                 );
 
                 // Add client to display div
