@@ -30,6 +30,9 @@ public class Wangx extends HttpServlet {
       out.println("<a href='/guacamole'>click me </a>");
       out.println("You are useing Wangx.java");
       out.println("this is wangx36.war");
+      out.println("your url is<br/>");
+      out.println(url);
+      out.println("<br/>");
       String htmltext = ""
 +"<!DOCTYPE HTML>"
 +""
