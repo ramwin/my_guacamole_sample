@@ -78,7 +78,9 @@ public class Wangx extends HttpServlet {
 +"            var display = document.getElementById('display');"
 +""
 +"            var guac = new Guacamole.Client("
-+"                new Guacamole.HTTPTunnel('tunnel')"
++"                new Guacamole.HTTPTunnel('"
++tunnel_url
++"')"
 +"            );"
 +""
 +"            display.appendChild(guac.getDisplay().getElement());"
