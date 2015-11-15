@@ -89,7 +89,6 @@ public class Wangx extends HttpServlet {
 +"                guac.sendMouseState(mouseState);"
 +"            };"
 +""
-+"            // Keyboard"
 +"            var keyboard = new Guacamole.Keyboard(document);"
 +""
 +"            keyboard.onkeydown = function (keysym) {"
