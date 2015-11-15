@@ -5,6 +5,8 @@ package org.glyptodon.guacamole.net.example;
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
  
 public class Wangx extends HttpServlet {
  
@@ -33,6 +35,25 @@ public class Wangx extends HttpServlet {
       out.println("your url is<br/>");
       out.println(url);
       out.println("<br/>");
+      Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9.]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
+      Matcher matcher = pattern.matcher(url);
+      out.println("You would send you tunnel url to <br/>");
+      String type = "";
+      String host = "";
+      String port = "";
+      String username = "";
+      String password = "";
+      if (matcher.find()) {
+          type = matcher.group(1);
+          host = matcher.group(2);
+          port = matcher.group(3);
+          username = matcher.group(4);
+          password = matcher.group(5);
+          }
+      String tunnel_url = "/zettage/tunnel/type"+type+"/host"+host+"/port"+port+"/username"+username+"/password"+password;
+      out.println(tunnel_url);
+      out.println("<br/>");
+
       String htmltext = ""
 +"<!DOCTYPE HTML>"
 +""
