@@ -27,7 +27,7 @@ public class Wangx extends HttpServlet {
       PrintWriter out = response.getWriter();
       StringBuffer url = request.getRequestURL();
       out.println("<h1>" + "testpage" + "</h1>");
-      out.println("<a href='../guacamole'>click me </a>");
+      out.println("<a href='/guacamole'>click me </a>");
       out.println("You are useing Wangx.java");
 
   }
