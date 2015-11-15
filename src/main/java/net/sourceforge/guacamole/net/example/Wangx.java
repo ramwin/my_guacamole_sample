@@ -55,25 +55,11 @@ public class Wangx extends HttpServlet {
       out.println("<br/>");
 
       String htmltext = ""
-+"<!DOCTYPE HTML>"
-+""
-+"<html>"
-+""
-+"    <head>"
-+"        <title>Guacamole Tutorial</title>"
-+"    </head>"
-+""
-+"     <body>"
-+""
-+"        <!-- Guacamole -->"
 +"        <script type='text/javascript'"
-+"            src='guacamole-common-js/all.min.js'></script>"
++"            src='/zettage/guacamole-common-js/all.min.js'></script>"
 +""
-+"        <!-- Display -->"
 +"        <div id='display'></div>"
-+""
-+"        <!-- Init -->"
-+"        <script type='text/javascript'> /* <![CDATA[ */"
++"        <script type='text/javascript'> "
 +""
 +"            var display = document.getElementById('display');"
 +""
@@ -95,11 +81,8 @@ public class Wangx extends HttpServlet {
 +"                guac.disconnect();"
 +"            }"
 +""
-+"        /* ]]> */ </script>"
-+""
-+"    </body>"
-+""
-+"</html>";
++"</script>"
++"";
         out.println(htmltext);
 
   }
