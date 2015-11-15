@@ -1,5 +1,5 @@
 // 为包命名
-package wangx;  
+package org.glyptodon.guacamole.net.example;
 
 // 导入必需的 java 库
 import java.io.*;
