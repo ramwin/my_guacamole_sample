@@ -14,54 +14,35 @@
 
         <!-- Display -->
         <div id="display"></div>
-        
-        <form>
-            type:<input id="type" type="text" /><br/>
-            host:<input id="host" type="text"/><br/>
-            port<input id="port" type="text"/><br/>
-            username:<input id="username" type="text"/><br/>
-            password:<input id="password" type="password"/> <br/>
-            <input type="button" value="result" onclick="test()"/>
-        </form>
-        
 
         <!-- Init -->
-        <script type="text/javascript">
-            function test(){
-                var type =document.getElementById("type").value;
-                var host =document.getElementById("host").value;
-                var port =document.getElementById("port").value;
-                var username =document.getElementById("username").value;
-                var password =document.getElementById("password").value;
-                 result = "tunnel"+"/"+"type"+type+"/"+"host"+host+"/"+"port"+port+"/"+"username"+username+"/"+"password"+password+"/"+"tunnel";
-                 
+        <script type="text/javascript"> /* <![CDATA[ */
 
-                // Get display div from document
-                var display = document.getElementById("display");
+            // Get display div from document
+            var display = document.getElementById('display');
 
-                // Instantiate client, using an HTTP tunnel for communications.
-                var guac = new Guacamole.Client(
-                    new Guacamole.HTTPTunnel(result)
-                );
+            // Instantiate client, using an HTTP tunnel for communications.
+            var guac = new Guacamole.Client(
+                new Guacamole.HTTPTunnel('tunnel')
+            );
 
-                // Add client to display div
-                display.appendChild(guac.getDisplay().getElement());
-                
-                // Error handler
-                guac.onerror = function(error) {
-                    alert(error);
-                };
+            // Add client to display div
+            display.appendChild(guac.getDisplay().getElement());
+            
+            // Error handler
+            guac.onerror = function(error) {
+                alert(error);
+            };
 
-                // Connect
-                guac.connect();
+            // Connect
+            guac.connect();
 
-                // Disconnect on close
-                window.onunload = function() {
-                    guac.disconnect();
-                }
+            // Disconnect on close
+            window.onunload = function() {
+                guac.disconnect();
             }
 
-        </script>
+        /* ]]> */ </script>
 
     </body>
 
