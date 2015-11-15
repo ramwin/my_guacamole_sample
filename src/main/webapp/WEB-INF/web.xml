@@ -20,7 +20,7 @@
     </servlet>
     <servlet>
         <servlet-name>MyServlet</servlet-name>
-        <servlet-class>wangx.Wangx</servlet-class>
+        <servlet-class>org.glyptodon.guacamole.net.example.TutorialGuacamoleTunnelServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
