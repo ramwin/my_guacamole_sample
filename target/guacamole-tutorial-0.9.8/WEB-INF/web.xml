@@ -29,6 +29,6 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MyServlet</servlet-name>
-        <url-pattern>/wangx/*</url-pattern>
+        <url-pattern>/test</url-pattern>
     </servlet-mapping>
 </web-app>
