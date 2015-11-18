@@ -28,13 +28,10 @@ public class Wangx extends HttpServlet {
       // 实际的逻辑是在这里
       PrintWriter out = response.getWriter();
       StringBuffer url = request.getRequestURL();
-      out.println("<h1>" + "Click Me to dive into the container" + "</h1>");
-      out.println("your url is<br/>");
-      out.println(url);
+      out.println("<button>" + "点击我来操作虚拟界面" + "</button>");
       out.println("<br/>");
       Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9.]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
       Matcher matcher = pattern.matcher(url);
-      out.println("You would send you tunnel url to <br/>");
       String type = "";
       String host = "";
       String port = "";
