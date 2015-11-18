@@ -22,13 +22,14 @@ public class Wangx extends HttpServlet {
                     HttpServletResponse response)
             throws ServletException, IOException
   {
-      // 设置响应内容类型
-      response.setContentType("text/html");
+      // 设置响应内容类型和字符编码
+      response.setCharacterEncoding("utf-8");
+      response.setContentType("text/html;charset=utf-8");
+      response.setLocate(new java.util.Locale("zh","CN"));
  
       // 实际的逻辑是在这里
       PrintWriter out = response.getWriter();
       StringBuffer url = request.getRequestURL();
-      out.println("<html><meta charset='utf-8'/>");
       out.println("<button>" + "点击我来操作虚拟界面" + "</button>");
       out.println("<br/>");
       Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9.]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
