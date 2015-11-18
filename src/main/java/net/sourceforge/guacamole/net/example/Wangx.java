@@ -25,7 +25,6 @@ public class Wangx extends HttpServlet {
       // 设置响应内容类型和字符编码
       response.setCharacterEncoding("utf-8");
       response.setContentType("text/html;charset=utf-8");
-      response.setLocate(new java.util.Locale("zh","CN"));
  
       // 实际的逻辑是在这里
       PrintWriter out = response.getWriter();
