@@ -12,7 +12,6 @@
     <url>http://guac-dev.org/</url>
     <build>
         <plugins>
-
             <!-- Compile using Java 1.6 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
