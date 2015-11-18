@@ -46,7 +46,6 @@ public class Wangx extends HttpServlet {
           password = matcher.group(5);
           }
       String tunnel_url = "/zettage/tunnel/type"+type+"/host"+host+"/port"+port+"/username"+username+"/password"+password;
-      out.println("<br/>");
 
       String htmltext = "\n"
 +"        <script type='text/javascript'\n"
