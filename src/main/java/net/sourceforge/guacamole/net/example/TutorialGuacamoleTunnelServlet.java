@@ -50,8 +50,10 @@ public class TutorialGuacamoleTunnelServlet
             {
             }
         // Connect to guacd - everything is hard-coded here.
+        String guacd_ip = System.getenv("GUACD_PORT_4822_TCP_ADDR");
+        int guacd_port = Integer.parseInt(System.getenv("GUACD_PORT_4822_TCP_PORT"));
         GuacamoleSocket socket = new ConfiguredGuacamoleSocket(
-                new InetGuacamoleSocket("localhost", 4822),
+                new InetGuacamoleSocket(guacd_ip,guacd_port),
                 config
         );
 
