@@ -22,7 +22,7 @@ public class TutorialGuacamoleTunnelServlet
         throws GuacamoleException {
 
         StringBuffer url = request.getRequestURL();
-        Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9.]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
+        Pattern pattern = Pattern.compile("type([a-zA-Z]+)/host([0-9a-zA-Z]+)/port([0-9]+)/username([a-zA-Z]+)/password([a-zA-Z0-9]+)");
         Matcher matcher = pattern.matcher(url);
         
         String type = "";
